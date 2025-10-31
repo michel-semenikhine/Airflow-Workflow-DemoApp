@@ -30,9 +30,9 @@ All functionality is covered by automated **unit and integration tests**, making
 ```bash
 Airflow-Workflow-DemoApp/
 ├── src/
-│ ├── utils.py # Password hashing & email validation.
-│ ├── user.py  # User class and in-memory database.
-│ └── auth.py  # Authentication system (login, logout, session tracking).
+│ ├── utils.py            # Password hashing & email validation.
+│ ├── user.py             # User class and in-memory database.
+│ └── auth.py             # Authentication system (login, logout, session tracking).
 │
 ├── tests/
 │ ├── test_utils.py       # Unit tests for hashing, email validation, and password checks.
@@ -40,7 +40,7 @@ Airflow-Workflow-DemoApp/
 │ ├── test_auth.py        # Unit tests for authentication and sessions.
 │ └── test_integration.py # Full workflow test combining all modules.
 │
-├── requirements.txt # Python dependencies.
+├── requirements.txt      # Python dependencies.
 └── README.md
 ```
 
@@ -63,9 +63,9 @@ pytest -v
 Result :
 ```bash
 ====================================================================== test session starts =======================================================================
-platform win32 -- Python 3.13.6, pytest-8.4.2, pluggy-1.6.0 -- D:\COURS UNI\Semestre 3\Software Engineering\Airflow-Workflow-DemoApp\venv\Scripts\python.exe
+platform win32 -- Python 3.13.6, pytest-8.4.2, pluggy-1.6.0 -- D:\<path>\Airflow-Workflow-DemoApp\venv\Scripts\python.exe
 cachedir: .pytest_cache
-rootdir: D:\COURS UNI\Semestre 3\Software Engineering\Airflow-Workflow-DemoApp
+rootdir: D:\<path>\Airflow-Workflow-DemoApp
 collected 27 items
 
 tests/test_auth.py::test_login_success PASSED                                                                                                               [  3%]
@@ -96,8 +96,7 @@ tests/test_utils.py::test_is_valid_email_invalid_formats[noatsign.com] PASSED   
 tests/test_utils.py::test_is_valid_email_invalid_formats[wrong@.com] PASSED                                                                                 [ 96%]
 tests/test_utils.py::test_is_valid_email_invalid_formats[@missinguser.com] PASSED                                                                           [100%] 
 
-======================================================================= 27 passed in 0.06s ======================================================================= 
-(venv) PS D:\COURS UNI\Semestre 3\Software Engineering\Airflow-Workflow-DemoApp> 
+======================================================================= 27 passed in 0.06s =======================================================================
 ```
 
 ## How It Fits into an Airflow Workflow
