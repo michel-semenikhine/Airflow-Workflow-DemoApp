@@ -1,18 +1,75 @@
-# Python cache
+# -------------------------
+# Python
+# -------------------------
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
+*.so
 
-# Virtual environment
+# Virtual environments
+.venv/
 venv/
+env/
 
-# Pytest cache
-.pytest_cache/
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
 
-# Logs
+# -------------------------
+# Airflow
+# -------------------------
+logs/
+airflow.db
 *.log
+*.pid
+*.err
 
-# IDE
+# Local Airflow configs
+airflow.cfg
+webserver_config.py
+
+# -------------------------
+# Docker
+# -------------------------
+# Docker general
+*.env
+.env.*
+
+# Docker volumes if accidentally created on host
+postgres-db-volume/
+*/postgres-db-volume/
+
+# -------------------------
+# IDE / OS files
+# -------------------------
+# VSCode
 .vscode/
+
+# JetBrains IDEs
 .idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# -------------------------
+# Tests
+# -------------------------
+.pytest_cache/
+.coverage
+htmlcov/
+.cache
+
+# -------------------------
+# Project-specific
+# -------------------------
+# Avoid pushing temp folders or runtime output
+tmp/
+temp/
+*.tmp
