@@ -4,7 +4,7 @@ from src.utils import check_password
 
 class AuthSystem:
     """
-    Système d'authentification simulé.
+    Simple authentication system.
     """
     def __init__(self, user_db: UserDatabase):
         self.user_db = user_db
@@ -12,7 +12,7 @@ class AuthSystem:
 
     def login(self, email: str, password: str) -> bool:
         """
-        Vérifie les identifiants et connecte l'utilisateur.
+        Verifies user credentials and starts a session if valid.
         """
         user = self.user_db.get_user(email)
         if not user:
@@ -24,7 +24,7 @@ class AuthSystem:
 
     def logout(self, email: str) -> bool:
         """
-        Déconnecte un utilisateur.
+        Logs out a user.
         """
         if email in self.active_sessions:
             self.active_sessions.remove(email)
@@ -33,6 +33,6 @@ class AuthSystem:
 
     def is_authenticated(self, email: str) -> bool:
         """
-        Vérifie si un utilisateur est actuellement connecté.
+        Checks if a user is currently logged in.
         """
         return email in self.active_sessions

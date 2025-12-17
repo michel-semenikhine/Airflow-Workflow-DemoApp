@@ -12,7 +12,7 @@ def hash_password(password: str) -> str:
 
 def check_password(password: str, hashed: str) -> bool:
     """
-    Cecks if the given passsword corresponds to an hash.
+    Checks if the given passsword corresponds to an hash.
     """
     if not password or not hashed:
         return False
